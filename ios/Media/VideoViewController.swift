@@ -3,7 +3,6 @@
 //
 //  Created by Christina Bharara.
 //
-
 import AVFoundation
 import AVKit
 import UIKit
@@ -29,17 +28,12 @@ class VideoViewController: UIViewController, IMAAdsLoaderDelegate,IMAAdsManagerD
     super.viewDidLoad()
     self.view.backgroundColor = UIColor.black;
     setUpContentPlayer()
-    if(videoUrl != "" && adTagUrl != ""){
-      setUpAdsLoader()
-    }
+    setUpAdsLoader()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated);
-    print("VideoViewController viewDidAppear adTagUrl: " + adTagUrl);
-    if(videoUrl != "" && adTagUrl != ""){
-      requestAds()
-    }
+    requestAds()
   }
   
   func setUpContentPlayer() {
@@ -54,25 +48,22 @@ class VideoViewController: UIViewController, IMAAdsLoaderDelegate,IMAAdsManagerD
       //error setting audio
     }
 
-   if(videoUrl != "" && adTagUrl != ""){
-      
-      let contentURL = URL(string: videoUrl)
-      let player = AVPlayer(url: contentURL!)
-      
-      playerViewController = AVPlayerViewController()
-            
-      playerViewController.player = player
-      
-      // Set up your content playhead and contentComplete callback.
-      contentPlayhead = IMAAVPlayerContentPlayhead(avPlayer: player)
-      NotificationCenter.default.addObserver(
-        self,
-        selector: #selector(VideoViewController.contentDidFinishPlaying(_:)),
-        name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-        object: player.currentItem);
-      
-      showContentPlayer()
-    } 
+    let contentURL = URL(string: videoUrl)
+    let player = AVPlayer(url: contentURL!)
+    
+    playerViewController = AVPlayerViewController()
+          
+    playerViewController.player = player
+    
+    // Set up your content playhead and contentComplete callback.
+    contentPlayhead = IMAAVPlayerContentPlayhead(avPlayer: player)
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(VideoViewController.contentDidFinishPlaying(_:)),
+      name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+      object: player.currentItem);
+    
+    showContentPlayer()
   }
   
   func showContentPlayer() {
@@ -98,7 +89,6 @@ class VideoViewController: UIViewController, IMAAdsLoaderDelegate,IMAAdsManagerD
     // Create ad display container for ad rendering.
     let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.view, viewController: self)
     // Create an ad request with our ad tag, display container, and optional user context.
-    print("request ads: " + adTagUrl);
     let request = IMAAdsRequest(
       adTagUrl: adTagUrl,
       adDisplayContainer: adDisplayContainer,
@@ -121,7 +111,6 @@ class VideoViewController: UIViewController, IMAAdsLoaderDelegate,IMAAdsManagerD
   }
   
   func adsLoader(_ loader: IMAAdsLoader, failedWith adErrorData: IMAAdLoadingErrorData) {
-    //print("Error loading ads: " + adErrorData.adError.message)
     showContentPlayer()
     playerViewController.player?.play()
   }
@@ -137,7 +126,6 @@ class VideoViewController: UIViewController, IMAAdsLoaderDelegate,IMAAdsManagerD
   
   func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
     // Fall back to playing content
-    //print("AdsManager error: " + error.message)
     showContentPlayer()
     playerViewController.player?.play()
   }
