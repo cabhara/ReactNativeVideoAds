@@ -11,6 +11,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		6B0D4715279B3EB000E9BC59 /* RNTAudioViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D4714279B3EB000E9BC59 /* RNTAudioViewManager.m */; };
+		6B0D4717279B3ED600E9BC59 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D4716279B3ED600E9BC59 /* AudioView.swift */; };
+		6B0D4719279B3EE800E9BC59 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D4718279B3EE800E9BC59 /* AudioViewController.swift */; };
 		6B332C0827962E180003417F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B332C0727962E180003417F /* VideoView.swift */; };
 		6B332C0C27962E580003417F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B332C0B27962E580003417F /* VideoViewController.swift */; };
 		6B332C0E27962E8F0003417F /* RNTVideoViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B332C0D27962E8F0003417F /* RNTVideoViewManager.m */; };
@@ -29,6 +32,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Media/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Media/main.m; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Media.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Media.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B0D4714279B3EB000E9BC59 /* RNTAudioViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTAudioViewManager.m; sourceTree = "<group>"; };
+		6B0D4716279B3ED600E9BC59 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		6B0D4718279B3EE800E9BC59 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		6B332C0727962E180003417F /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoView.swift; path = Media/VideoView.swift; sourceTree = "<group>"; };
 		6B332C0B27962E580003417F /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = Media/VideoViewController.swift; sourceTree = "<group>"; };
 		6B332C0D27962E8F0003417F /* RNTVideoViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNTVideoViewManager.m; path = Media/RNTVideoViewManager.m; sourceTree = "<group>"; };
@@ -65,8 +71,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				6B332C0D27962E8F0003417F /* RNTVideoViewManager.m */,
+				6B0D4714279B3EB000E9BC59 /* RNTAudioViewManager.m */,
 				6B332C0727962E180003417F /* VideoView.swift */,
 				6B332C0B27962E580003417F /* VideoViewController.swift */,
+				6B0D4716279B3ED600E9BC59 /* AudioView.swift */,
+				6B0D4718279B3EE800E9BC59 /* AudioViewController.swift */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
 				C0EF4963999A4B69ACFE8CC5 /* noop-file.swift */,
 				8EC09C5CBB7D4481831B9CA9 /* Media-Bridging-Header.h */,
@@ -322,9 +331,12 @@
 				6B332C0C27962E580003417F /* VideoViewController.swift in Sources */,
 				6B332C0827962E180003417F /* VideoView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				6B0D4717279B3ED600E9BC59 /* AudioView.swift in Sources */,
+				6B0D4715279B3EB000E9BC59 /* RNTAudioViewManager.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
 				FF2E8828F4624DF6AA3218D4 /* noop-file.swift in Sources */,
 				6B332C0E27962E8F0003417F /* RNTVideoViewManager.m in Sources */,
+				6B0D4719279B3EE800E9BC59 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

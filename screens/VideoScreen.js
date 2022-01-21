@@ -10,7 +10,7 @@ const width=Dimensions.get("window").width;
 
 export default function VideoScreen() {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center",paddingBottom:80 }}>
       {Constants.platform.ios && (
             <VideoViewIos
               videoUrl={videoLink}

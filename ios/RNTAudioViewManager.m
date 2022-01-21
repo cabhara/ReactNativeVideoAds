@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTViewManager.h>
 #import <React/RCTUIManager.h>
-#import "bhs-Swift.h"
+#import "Media-Swift.h"
 
 @interface RNTAudioViewManager : RCTViewManager
 
