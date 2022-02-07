@@ -12,6 +12,7 @@ function HomeScreen({ navigation }) {
         title="Video"
         onPress={() => navigation.navigate('Video')}
       />
+      <View style={{height:42}}/>
       <Button
         title="Audio"
         onPress={() => navigation.navigate('Audio')}

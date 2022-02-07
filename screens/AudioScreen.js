@@ -6,6 +6,7 @@ import {
   Image,
 } from "react-native";
 import AudioViewIos from "../components/AudioViewIos";
+import AudioViewAndroid from "../components/AudioViewAndroid";
 import Constants from "expo-constants";
 
 const audioLink = "http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3";
@@ -51,7 +52,7 @@ export default function AudioStreamModal() {
             )}
           </TouchableOpacity>
 
-          {/* {Constants.platform.android && (
+          {Constants.platform.android && (
             <View
               style={{
                 height: 3,
@@ -59,9 +60,9 @@ export default function AudioStreamModal() {
                 backgroundColor: "grey",
               }}
             >
-              <AudioView ref={ref} url={broadcastOptionAudioLink} />
+              <AudioViewAndroid ref={ref} url={audioLink} />
             </View>
-          )} */}
+          )}
 
           {Constants.platform.ios && (
             <View
